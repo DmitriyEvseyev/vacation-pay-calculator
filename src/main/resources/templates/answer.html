@@ -1,0 +1,37 @@
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="../static/style.css" th:href="@{/style.css}">
+</head>
+<body>
+<div class="container">
+    <div class="forms">
+        <div class="form signup">
+            <span class="title">Vacation pay calculator</span>
+            <form>
+                <div class="input-field">
+                    <h3 class="lab">Average monthly salary $ </h3>
+                    <p   th:text="${mediumSalary}"></p>
+                </div>
+                <div class="input-field">
+                    <h3 class="lab">Vacation start date</h3>
+                    <p   th:text="${startVacation}"></p>
+                </div>
+                <div class="input-field">
+                    <h3 class="lab">Vacation end date</h3>
+                    <p   th:text="${endVacation}"></p>
+                </div>
+                <div class="input-field">
+                    <h3 class="lab">The amount of vacation pay</h3>
+                    <p class="pay" th:text="${vacationPay}"></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
