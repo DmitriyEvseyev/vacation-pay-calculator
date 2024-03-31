@@ -14,7 +14,7 @@ import java.util.Set;
 @Service
 @RequiredArgsConstructor
 public class CalculatorServiceImpl implements CalculatorService {
-    public static final String FORMAT_OF_VACATION_PAYMENTS = "#0.00";
+    public static final String FORMAT_OF_VACATION_PAY = "#0.00";
     public static final double AVERAGE_AMOUNT_DAY_IN_MONTH = 29.3;
     private final Calculator calculator;
 
@@ -25,7 +25,7 @@ public class CalculatorServiceImpl implements CalculatorService {
         calculator.setMediumSalary(mediumSalary);
         calculator.setStartVacation(startVacation);
         calculator.setEndVacation(endVacation);
-        result = new DecimalFormat(FORMAT_OF_VACATION_PAYMENTS).format(
+        result = new DecimalFormat(FORMAT_OF_VACATION_PAY).format(
                 calculator.getMediumSalary() / AVERAGE_AMOUNT_DAY_IN_MONTH * getAmountVacationDays());
 
         return result;
